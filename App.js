@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Registration from './pages/Registration';
 import AccountRecovery from './pages/AccountRecovery';
 import Home from './pages/Home';
+import TodoApp from './todo/TodoApp';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,7 +18,7 @@ function App() {
     <NavigationContainer>
       <PaperProvider>
         <Stack.Navigator initialRouteName='Landing'>
-          <Stack.Screen name='Landing' component={ Landing } />
+          <Stack.Screen name='Welcome' component={ Landing } />
           <Stack.Screen name='Login' component={ Login } />
           <Stack.Screen name='Registration' component={ Registration } />
           <Stack.Screen 
@@ -25,6 +26,10 @@ function App() {
             component={ AccountRecovery } 
             options={{title: 'Account Recovery'}} />
           <Stack.Screen name='Home' component={ Home } />
+          <Stack.Screen 
+            name='TodoApp' 
+            component={ TodoApp } 
+            options={{title: 'Todo App'}} />
         </Stack.Navigator>
       </PaperProvider>
     </NavigationContainer>

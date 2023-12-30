@@ -13,7 +13,7 @@ const AccountRecovery = ({ navigation }) => (
       source={require('../assets/react-icon.png')}
       style={Styles.image} />
     <Text variant='headlineLarge'>Restore Password</Text>
-    <TextInput 
+    <TextInput
       style={Styles.block} 
       mode='outlined' 
       label="Email" />

@@ -11,11 +11,11 @@ const Landing = ({ navigation }) => (
     <Image 
       source={require('../assets/react-icon.png')}
       style={Styles.image} />
-    <Text variant='headlineLarge'>Login</Text>
+    <Text variant='headlineLarge'>ZenList</Text>
     <Text 
       style={[Styles.centerText, Styles.subtitleText]} 
       variant='bodyLarge'>
-      The easiest way to start your amazing application.
+      Ditch the brain clutter, embrace the calm. Your pocket-sized productivity pal, here to transform your to-do list into a powerful tool for success.
     </Text>
     <Text 
       style={[Styles.centerText, Styles.subtitleText]} 
