@@ -17,6 +17,11 @@ const Landing = ({ navigation }) => (
       variant='bodyLarge'>
       The easiest way to start your amazing application.
     </Text>
+    <Text 
+      style={[Styles.centerText, Styles.subtitleText]} 
+      variant='bodyLarge'>
+      Note: This is still a work in progress. Please refer to README.md for details.
+    </Text>
     <Button 
       style={Styles.block} 
       mode='contained' 
