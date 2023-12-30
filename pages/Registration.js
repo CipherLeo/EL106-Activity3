@@ -11,7 +11,7 @@ import * as Yup from 'yup';
 import Styles from '../styles/GlobalStyles';
 
 const Registration = ({ navigation }) => {
-  
+
   const validationSchema = Yup.object({
     name: Yup
       .string()
@@ -33,7 +33,7 @@ const Registration = ({ navigation }) => {
   const [hidePassword, setHidePassword] = React.useState(true);
 
   return (<Formik
-    initialValues={{ 
+    initialValues={{
       name: '',
       email: '',
       password: '',
@@ -41,28 +41,28 @@ const Registration = ({ navigation }) => {
     }}
     validationSchema={validationSchema}
     onSubmit={async (values) => {
-      
+
     }}
   >
-    {({ 
-      handleChange, 
-      handleBlur, 
-      handleSubmit, 
-      isSubmitting, 
-      errors, 
-      values 
+    {({
+      handleChange,
+      handleBlur,
+      handleSubmit,
+      isSubmitting,
+      errors,
+      values
     }) => {
       console.debug(errors);
       return (
         <ScrollView>
           <View style={Styles.container}>
-            <Image 
+            <Image
               source={require('../assets/react-icon.png')}
               style={Styles.image} />
             <Text variant='headlineLarge'>Create Account</Text>
-            <TextInput 
-              style={Styles.block} 
-              mode='outlined' 
+            <TextInput
+              style={Styles.block}
+              mode='outlined'
               label="Name"
               value={values.name}
               onChangeText={handleChange('name')}
@@ -73,9 +73,9 @@ const Registration = ({ navigation }) => {
                 {errors.name}
               </HelperText>
             )}
-            <TextInput 
-              style={Styles.block} 
-              mode='outlined' 
+            <TextInput
+              style={Styles.block}
+              mode='outlined'
               label="Email"
               value={values.email}
               onChangeText={handleChange('email')}
@@ -87,9 +87,9 @@ const Registration = ({ navigation }) => {
                 {errors.email}
               </HelperText>
             )}
-            <TextInput 
+            <TextInput
               style={Styles.block}
-              mode='outlined' 
+              mode='outlined'
               label="Password"
               secureTextEntry={hidePassword}
               value={values.password}
@@ -101,9 +101,9 @@ const Registration = ({ navigation }) => {
                 {errors.password}
               </HelperText>
             )}
-            <TextInput 
-              style={Styles.block}  
-              mode='outlined' 
+            <TextInput
+              style={Styles.block}
+              mode='outlined'
               label="Confirm Password"
               secureTextEntry={hidePassword}
               value={values.confirmPassword}
@@ -115,8 +115,8 @@ const Registration = ({ navigation }) => {
                 {errors.confirmPassword}
               </HelperText>
             )}
-            <Button 
-              style={Styles.block} 
+            <Button
+              style={Styles.block}
               mode='contained'
               loading={isSubmitting}
               disabled={isSubmitting}
